@@ -41,7 +41,7 @@ public class RedisLock02 {
             return false;
         }
         Long result = jedis.del(lockKey);
-        return UNLOCK_SUCCESS == result ? true: false;
+        return UNLOCK_SUCCESS == result;
     }
 
 }

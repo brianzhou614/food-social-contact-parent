@@ -7,16 +7,16 @@ spring:
   # 数据库
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root123
-    url: jdbc:mysql://127.0.0.1:3306/db_immoc?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: cat
+    password: 123$%^qwe
+    url: jdbc:mysql://rm-bp1i64x1vq836b3tdoo.mysql.rds.aliyuncs.com:3306/db_immoc?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true
   # Redis
   redis:
     # 启用哨兵模式以后无需直接连接 Redis，通过哨兵可以获得主从信息
     port: 6379
-    host: 114.67.67.44
+    host: 120.79.159.223
     timeout: 3000 # 连接超时时间
-    password: root@123456 # Redis 服务器密码
+    password: 123456 # Redis 服务器密码
     database: 5
   # Swagger
   swagger:

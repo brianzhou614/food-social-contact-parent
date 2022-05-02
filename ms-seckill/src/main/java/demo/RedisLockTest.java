@@ -17,7 +17,7 @@ public class RedisLockTest {
                 UUID.randomUUID().toString(), 60);
         try {
             if (locked) {
-                for (int i = 0; i < 500; i++) {
+                for (int i = 0; i < 5000; i++) {
                     count++;
                 }
             }
@@ -35,7 +35,7 @@ public class RedisLockTest {
         jedisPoolConfig.setMinIdle(1);
         jedisPoolConfig.setMaxTotal(5);
         JedisPool jedisPool = new JedisPool(jedisPoolConfig,
-                "192.168.10.101", 6379, 1000, "123456");
+                "120.79.159.223", 6379, 1000, "123456");
 
         Thread t1 = new Thread(() -> redisLockTest.call(jedisPool.getResource()));
         Thread t2 = new Thread(() -> redisLockTest.call(jedisPool.getResource()));
